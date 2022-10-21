@@ -1,0 +1,16 @@
+[{
+        "nombre": "Arnau Cervera",
+        "descripcion": "Currently in his second year of DAW, he has a medium degree in SMX and a higher degree in DAM that he did in the same STUCOM center where he did his internship in a company called Motum Tech, where he made forms and mobile applications. This same company hired him at the end of the internship and he has been working for more than 4 months",
+        "imagen": "p3.jpeg"
+    },
+    {
+        "nombre": "Manish Thakur",
+        "descripcion": "STUCOM students currently studying the second year of DAW (web application development), other studies: DAM (multiplatform application development) and Technological baccalaureate. With experience as an internship in web development in two companies, one located in Barcelona called PhpNinja and the other in London Ringley.",
+        "imagen": "p2.jpeg"
+    },
+    {
+        "nombre": "Beatriz Muñoz",
+        "descripcion": "I am 21 years old, I am currently in my last year of higher degree of Web Application Development (DAW) in the study center STUCOM, I have also done a course in web design and publishing. I chose this branch because I was very attracted to the design and web programming when I did the middle grade of Microcomputer Systems and Networks (SMX) studied in L'Estatut.",
+        "imagen": "p1.PNG"
+    }
+]

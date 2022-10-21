@@ -1,0 +1,42 @@
+    #mid {
+        vertical-align: middle;
+    }
+    
+    #img {
+        min-width: 50px;
+        width: 5%;
+        padding-left: 10px;
+    }
+    
+    .nosotros {
+        border-top: 60px solid rgb(138, 138, 138);
+        margin-top: 100px;
+        padding-top: 10px;
+    }
+    
+    .non {
+        width: 80%;
+        margin: auto;
+    }
+    
+    #contatti {
+        margin: auto;
+    }
+    
+    #contatti a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    @media (max-width: 575.98px) {
+        #contatti .maps iframe {
+            width: 70%;
+        }
+    }
+    
+    @media (min-width: 576px) {
+        #contatti .maps iframe {
+            width: 100%;
+            height: 450px;
+        }
+    }
