@@ -17,4 +17,9 @@ export class AppComponent {
 
   }
   
+  descrip:boolean = false;
+  verDes(): void{
+    this.descrip= !this.descrip;
+  }
+
 }
