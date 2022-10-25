@@ -74,12 +74,12 @@
     </div>
     <h2 class="text-center text-bg-dark p-4">TEAM</h2>
     <div class="card-group m-auto w-75">
-        <div class="card border-0 m-2 bg-dar" *ngFor="let info of Informacion">
+        <div class="card border-0 m-2 bg-dar" *ngFor="let info of Informacion;index as i">
             <div class="card border-0">
-                <img src="assets/imag/{{info.imagen}}" class="card-img-top ">
+                <img src="assets/imag/{{Informacion[i]['imagen']}}" class="card-img-top ">
                 <div class="card-body ">
-                    <h3 class="card-title ">{{info.nombre}}</h3>
-                    <p class="card-text">{{info.descripcion}}</p>
+                    <h3 class="card-title ">{{Informacion[i]["nombre"]}}</h3>
+                    <p class="card-text">{{Informacion[i]["descripcion"]}}</p>
                 </div>
             </div>
         </div>
