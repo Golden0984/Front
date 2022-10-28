@@ -12,6 +12,15 @@ import info from 'src/assets/json/info.json';
 
 export class AppComponent {
   title = 'Version-0';
-  Informacion: any = info;
+  Informacion = info;
+  ngOnInit():void{
+
+  }
   
+  descrip:boolean = false;
+
+  verDes(): void{
+    this.descrip= !this.descrip;
+  }
+
 }
