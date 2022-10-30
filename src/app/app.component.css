@@ -2,12 +2,6 @@
         vertical-align: middle;
     }
     
-    #img {
-        min-width: 50px;
-        width: 5%;
-        padding-left: 10px;
-    }
-    
     .nosotros {
         border-top: 60px solid rgb(138, 138, 138);
         margin-top: 100px;

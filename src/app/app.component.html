@@ -7,44 +7,16 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <div class="body bg-dark">
-    <nav class=" navbar navbar-expand navbar-dark bg-opacity-50">
-        <!-- Modo movil -->
-        <img id="img" src="assets/imag/icono-logo-blanco.png">
-        <div class=" navbar-collapse">
-            <ul class="navbar-nav mr-auto ms-4">
-
-                <li class="nav-item active m-1 ">
-                    <a class="nav-link align-middle" href="#">HOME</a>
-                </li>
-                <li class="nav-item m-1">
-                    <a class="nav-link" href="#">ABOUT US</a>
-                </li>
-                <li class="nav-item m-1">
-                    <a class="nav-link" href="../assets/html/h1.html">CONTACT </a>
-                </li>
-            </ul>
-        </div>
-        <div class="p-2 m-1">
-            <button type="button" class="btn btn-danger m-1">Login</button>
-            <button type="button" class="btn btn-danger">Resgistrar</button>
-        </div>
-    </nav>
+    <app-header></app-header>
     <div class="text-center bg-dark ">
         <h1 class="text-bg-dark p-lg-5 m-auto">OneMore</h1>
-
     </div>
-
     <div class="d-flex m-auto ">
-        <div (click)="verDes();" class=" card text-bg-dark m-3 w-25 h-50">
+        <div class="card text-bg-dark m-3 w-25 h-50">
             <img src="assets/imag/lol.jpeg" class="card-img ">
-            <div *ngIf="descrip" class=" bg-danger bg-opacity-25 card-img-overlay ">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This as a natural little bit longer.</p>
-                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            <div class="card-img-overlay">
             </div>
         </div>
-
-
         <div class="card text-bg-dark m-3 w-25 h-50">
             <img src="assets/imag/valo.png" class="card-img  ">
             <div class="card-img-overlay ">
