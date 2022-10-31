@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-//IMPORTO EL ARCHIVO JSON
-import info from 'src/assets/json/info.json';
+//IMPORTO EL ARCHIVO SERVICIO JSON
+import { JsonService } from './services/json.service';
 
 
 @Component({
@@ -12,9 +12,11 @@ import info from 'src/assets/json/info.json';
 
 export class AppComponent {
   title = 'Version-0';
-  Informacion = info;
-  ngOnInit():void{
 
+  constructor(public dataService: JsonService){}
+
+  ngOnInit():void{
+    this.dataService.datosJson();
   }
   
   descrip:boolean = false;

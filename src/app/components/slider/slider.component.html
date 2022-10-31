@@ -1,0 +1,7 @@
+<swiper [slidesPerView]="4" [spaceBetween]="10" class="mySwiper">
+    <ng-template swiperSlide *ngFor="let dato of dataService.json.carrousel">
+        <div style="color: white">
+            <img style="width: 100%;" [src]="dato.ruta">
+        </div>
+    </ng-template>
+</swiper>
