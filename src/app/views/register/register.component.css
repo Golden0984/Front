@@ -1,0 +1,175 @@
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .centro-part1 {
+    gap: 55px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: start;
+  }
+  
+  .formulario-btn {
+    margin: 25px 0px 40px 0px;
+  }
+  
+  .contenedorPagina{  
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .contenedor-presentacion {
+    height: 100vh;
+    width: 100%;
+    background-color: #444140;
+    color: #ffffffbf;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+  
+  .caja-imagen-presentacion {
+    max-width: 300px;
+  }
+  
+  section div:first-child {
+    display: flex;
+    gap: 15px;
+  }
+  
+  section div i {
+    color: #E54B4B ;
+    font-size: 25px;
+  }
+  
+  .contenedor-presentacion:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  span {
+    position: relative;
+    bottom: 5px;
+    font-weight: 900;
+  }
+  .img-gastrood{
+    width: 250px;
+    display: flex;
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+  
+  .box-title h3 {
+    font-size: 30px;
+  }
+
+  .btn-general {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: #E54B4B;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+ 
+  /* botones sencillos */
+  .box-options-register {
+    gap: 15px;
+  }
+  
+  .btn-sencill {
+    padding: 8px;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .lg-facebook {
+    width: 14px;
+  }
+  
+  .btn-sencill img {
+    width: 23px;
+  }
+
+  .margin{
+    margin-top: 80px;
+  }
+  
+  .detalles{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+  }
+  /* caja datos inputs con iconos*/
+  .cajaDatos {
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    border: 1.5px solid gray;
+    background-color: white;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px 0px 5px 35px;
+    font-family: inherit;
+    width: 100%;
+  }
+  
+  .icono-user {
+    position: absolute;
+    left: 13px;
+    top: 8px;
+  }
+  .cajaDatos p i {
+    color: black;
+  }
+  
+  h2{
+    font-size:23px
+  }
+  
+  /* Media para cuando la web sea mayor a 1000px*/
+  @media (min-width: 1000px) {
+    .centro {
+      flex-direction: row;
+    }
+  
+    .contenedor-presentacion{
+      flex: 1;
+    }
+    .centro-part1{
+      width: 50%;
+    }
+  }
+  /* cuando sea menor a 650px*/
+  @media (max-width: 650px) {
+    .imagen-george-prada {
+      align-self: center;
+    }
+  }
+  
+  

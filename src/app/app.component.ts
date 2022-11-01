@@ -18,11 +18,5 @@ export class AppComponent {
   ngOnInit():void{
     this.dataService.datosJson();
   }
-  
-  descrip:boolean = false;
-
-  verDes(): void{
-    this.descrip= !this.descrip;
-  }
 
 }

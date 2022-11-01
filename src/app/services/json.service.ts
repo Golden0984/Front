@@ -11,12 +11,19 @@ export class JsonService {
 
   constructor(private httpClient: HttpClient) { }
 
-  datosJson(){
+  // Servicio para regocer la informacion de datos json y reescribir el carrousel para añadir el campo show description
+  datosJson() {
     this.httpClient.get("assets/json/Info.json")
-    .subscribe((data: any) => {
-      this.json = data;
-      console.log("json");
-      console.log(data);
-    })
+      .subscribe((data: any) => {
+        this.json = data;
+        this.json.carrousel = this.json.carrousel.map((item: any) => {
+          return {
+            ...item,
+            showDescription: false
+          }
+        })
+        console.log(this.json);
+
+      })
   }
 }

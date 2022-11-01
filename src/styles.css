@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.swiper-slide {
+    height: auto !important;
+}
+
+.swiper-slide > div{
+    height: 100%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}

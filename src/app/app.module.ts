@@ -9,6 +9,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { MembersComponent } from './components/members/members.component';
 import { InfoContactComponent } from './components/info-contact/info-contact.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { HomeComponent } from './views/home/home.component';
+import { AboutUsComponent } from './views/about-us/about-us.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +22,13 @@ import { SliderComponent } from './components/slider/slider.component';
     HeaderComponent,
     MembersComponent,
     InfoContactComponent,
-    SliderComponent
+    SliderComponent,
+    HomeComponent,
+    AboutUsComponent,
+    ContactComponent,
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

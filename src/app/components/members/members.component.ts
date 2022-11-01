@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonService } from 'src/app/services/json.service';
 
 @Component({
   selector: 'app-members',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dataService: JsonService) { }
 
   ngOnInit(): void {
   }

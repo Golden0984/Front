@@ -1,7 +1,17 @@
-<swiper [slidesPerView]="4" [spaceBetween]="10" class="mySwiper">
-    <ng-template swiperSlide *ngFor="let dato of dataService.json.carrousel">
-        <div style="color: white">
-            <img style="width: 100%;" [src]="dato.ruta">
-        </div>
-    </ng-template>
-</swiper>
+<div class="text-center bg-dark ">
+    <h1 class="text-bg-dark p-lg-5 m-auto">OneMore</h1>
+</div>
+<div class="my-swiper">
+    <swiper *ngIf="dataService.json" [breakpoints]="break" [slidesPerView]="1" [spaceBetween]="10" style="max-height: 200px;">
+        <ng-template swiperSlide *ngFor="let dato of dataService.json.carrousel">
+            <div (click)="toggleDescription(dato)" style="color: white">
+                <img style="width: 100%;" [src]="dato.ruta">
+                <div *ngIf="dato.showDescription" class=" bg-danger bg-opacity-25 card-img-overlay card-content">
+                    <h5 class="card-title">{{ dato.title }}</h5>
+                    <p class="card-text"> {{ dato.description }}</p>
+                    <p class="card-text"><small>{{ dato.time }}</small></p>
+                </div>
+            </div>
+        </ng-template>
+    </swiper>
+</div>

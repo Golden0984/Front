@@ -1,10 +1,9 @@
+#mid {
+    vertical-align: middle;
+}
+
 .nosotros {
     border-top: 60px solid rgb(138, 138, 138);
     margin-top: 100px;
     padding-top: 10px;
-}
-
-.non {
-    width: 80%;
-    margin: auto;
 }
