@@ -1,7 +1,6 @@
 .max-width{
-    max-width: 500px;
+    max-width: 530px;
     margin: 0 auto;
-
 }
 p{
     margin: 0;
@@ -9,17 +8,6 @@ p{
   
   .iconUser {
     width: 100px;
-  }
-  
-  .boton-inicio {
-    margin: auto;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    background: #E54B4B ;
-    border: none;
-    color: white;
-    margin-top: 15px;
   }
  
   input.boton-inicio[value] {
@@ -39,6 +27,7 @@ p{
   .img-omgg {
     width: 60px;
     margin: 10px;
+    margin-bottom: 70px;
   }
   
   .box-information {
@@ -85,10 +74,15 @@ p{
   
   hr {
     width: 100%;
+    margin: 0;
   }
   
   .linksRegister {
     margin-top: 26px;
+  }
+
+  .linksRegister div{
+    display: block;
   }
 
   

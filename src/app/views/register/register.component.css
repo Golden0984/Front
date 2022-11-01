@@ -4,6 +4,10 @@
     align-items: center;
     flex-direction: column;
   }
+
+p{
+  margin: 0;
+}
   
   .centro-part1 {
     gap: 55px;
@@ -28,61 +32,65 @@
   .contenedor-presentacion {
     height: 100vh;
     width: 100%;
-    background-color: #444140;
+    background-image: url('/assets/img/personajes-de-valorant.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: #ffffffbf;
-    flex-direction: column;
     align-items: center;
     display: flex;
-  }
-  
-  .caja-imagen-presentacion {
-    max-width: 300px;
-  }
-  
-  section div:first-child {
-    display: flex;
-    gap: 15px;
-  }
-  
-  section div i {
-    color: #E54B4B ;
-    font-size: 25px;
-  }
-  
-  .contenedor-presentacion:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
     justify-content: center;
+  }
+
+  .presentacion{
+    width: 360px;
+  }
+  .presentacion div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .presentacion div i{
+   color: #E54B4B;
+   font-size: 22px;
   }
   
   span {
     position: relative;
     bottom: 5px;
     font-weight: 900;
+    padding: 0px 10px;
   }
-  .img-gastrood{
-    width: 250px;
+  .img-omgg{
+    width: 60px;
     display: flex;
     align-self: flex-start;
     margin-top: 10px;
+    margin-left: 12px;
   }
   
   .box-title h3 {
     font-size: 30px;
   }
-
-  .btn-general {
-    width: 100%;
-    height: 35px;
-    border: none;
-    background-color: #E54B4B;
-    border-radius: 10px;
+   /*B*/
+   .hr-detalles {
     color: white;
-    cursor: pointer;
-    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
- 
+  
+  .hr-detalles span {
+    padding: 10px;
+  }
+  
+  hr {
+    width: 100%;
+    margin: 0;
+  }
+
   /* botones sencillos */
   .box-options-register {
     gap: 15px;

@@ -1,10 +1,10 @@
 <div class="box-login bg-dark">
-    <div class="d-flex flex-column gap-5 w-100 vh-100">
+    <div class="d-flex flex-column gap-5 w-100 vh-100 text-white">
         <div class="img-omgg">
             <img src="assets/img/icono-logo-blanco.png" alt="">
         </div>
-        <div class="d-flex flex-column gap-3 w-100 max-width p-3">
-            <h3>Log in to Gastrood</h3>
+        <div class="d-flex flex-column gap-3 w-100 max-width p-4">
+            <h3>Log in to One More G.G</h3>
             <div class="detalles box-options-register">
                 <button class="btn-sencill">
                     <svg class="lg-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="DodgerBlue">
@@ -35,18 +35,24 @@
                     </p>
                     <input class="flex-grow-1" type="password" id="contraUsuario" name="contrasena" placeholder="Password">
                 </div>
-                <input class="boton-inicio" name="boton-inicio" type="submit" value="Log in">
+                <input class="btn-danger btn w-100 my-3" name="boton-inicio" type="submit" value="Log in">
             </form>
             <div class="linksRegister">
                 <hr>
-                <a href="">Don't have an account yet???</a>
-                <a href="#">Did you forget your password?</a>
+                <div>
+                    <span>Don't have an account yet??</span>
+                    <a routerLink="/register">Register</a>
+                </div>
+                <div>
+                    <span>Did you fogotted your password??</span>
+                    <a href="">Recover account</a>
+                </div>
             </div>
         </div>
     </div>
     <div class="box-information">
         <section>
-            <p>Nadie es innecesario...</p>
+            <p>no one is unnecessary...</p>
             <span>Yitán</span>
         </section>
     </div>

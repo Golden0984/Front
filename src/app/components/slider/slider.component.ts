@@ -13,16 +13,24 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.break = {
-      400: {
+      470: {
         slidesPerView: 2,
         spaceBetween: 10
       },
-      550: {
+      700: {
         slidesPerView: 3,
         spaceBetween: 10
       },
-      850: {
+      1100: {
         slidesPerView: 4,
+        spaceBetween: 10
+      },
+      1500:{
+        slidesPerView: 5,
+        spaceBetween: 10
+      },
+      1900:{
+        slidesPerView: 6,
         spaceBetween: 10
       }
     }
