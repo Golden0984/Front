@@ -15,6 +15,7 @@ import { ContactComponent } from './views/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { ServicesComponent } from './views/services/services.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RegisterComponent } from './views/register/register.component';
     ContactComponent,
     FooterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

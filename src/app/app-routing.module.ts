@@ -5,6 +5,7 @@ import { ContactModule } from './views/contact/contact.module';
 import { HomeModule } from './views/home/home.module';
 import { LoginModule } from './views/login/login.module';
 import { RegisterModule } from './views/register/register.module';
+import { ServicesModule } from './views/services/services.module';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:"register",
     loadChildren: () => import('./views/register/register.module').then(m => RegisterModule)
+  },
+  {
+    path:"services",
+    loadChildren: () => import('./views/services/services.module').then(m => ServicesModule)
   }
 ];
 
