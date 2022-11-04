@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SymfonyService } from 'src/app/services/symfony.service';
+
 
 @Component({
   selector: 'app-services',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public symfonyService: SymfonyService) { }
 
   ngOnInit(): void {
+    this.symfonyService.getUsuarios();
   }
 
 }

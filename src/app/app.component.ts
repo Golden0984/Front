@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-
-//IMPORTO EL ARCHIVO SERVICIO JSON
 import { JsonService } from './services/json.service';
 
 
