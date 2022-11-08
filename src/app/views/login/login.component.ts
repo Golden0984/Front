@@ -15,20 +15,25 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.formGroup.group({
-      usuario:['',[
+      usuario: ['', [
         Validators.required
       ]],
-      contrasena:['',[
+      contrasena: ['', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(8)
       ]]
-    });
+    }, { updateOn: 'submit' });
   }
 
-  send(){
-    console.log(this.formLogin.get("contrasena")?.hasError('required'));
-    console.log(this.formLogin.get("contrasena")?.errors);
+  submitLogin() {
+    console.log(this.formLogin);
+    if (this.formLogin.valid) {
+      // registro
+      console.log("correcto");
+    } else {
+      this.formLogin.markAllAsTouched()
+    }
   }
 
 

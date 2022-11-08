@@ -9,10 +9,9 @@ import { SymfonyService } from 'src/app/services/symfony.service';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor(public symfonyService: SymfonyService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.symfonyService.getUsuarios();
   }
 
 }

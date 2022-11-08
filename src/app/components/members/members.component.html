@@ -11,12 +11,12 @@
     </div>
     <h2 class="text-center text-bg-dark p-4">TEAM</h2>
     <div class="card-group m-auto w-75">
-        <div class="card border-0 m-2 bg-dar" *ngFor="let datos of dataService.json.aboutUs.integrantes">
+        <div class="card border-0 m-2 bg-dar" *ngFor="let integrante of symfonyService.AboutUs">
             <div class="card border-0">
-                <img src="assets/img/{{ datos.imagen }}" class="card-img-top ">
+                <img [src]="integrante.imagen" class="card-img-top ">
                 <div class="card-body ">
-                    <h3 class="card-title">{{ datos.nombre }}</h3>
-                    <p class="card-text">{{ datos.descripcion }}</p>
+                    <h3 class="card-title">{{ integrante.nombre }}</h3>
+                    <p class="card-text">{{ integrante.descripcion }}</p>
                 </div>
             </div>
         </div>

@@ -22,7 +22,7 @@
                 <span>o</span>
                 <hr>
             </div>
-            <form class="formularioLogin formLogin" [formGroup]="formLogin" (submit)="send()">
+            <form class="formularioLogin formLogin" [formGroup]="formLogin" (submit)="submitLogin()">
                 <div class="cajaDatos usuario caja-datos-user">
                     <p class="icono-user" for="usuario">
                         <i class="fa-solid fa-user"></i>
@@ -34,7 +34,7 @@
                         <i class="fa-solid fa-lock"></i>
                     </p>
                     <input class="flex-grow-1" type="password" id="contraUsuario" formControlName="contrasena" placeholder="Password">
-                    <!--<h2 *ngIf="formLogin.get('contrasena')?.hasError('required')" >Este campo es requerido</h2>-->
+                    <span *ngIf="formLogin.get('contrasena')?.hasError('required') && (formLogin.get('contrasena')?.dirty || formLogin.get('contrasena')?.touched)" >Este campo es requerido</span>
                 </div>
                 <input class="btn-danger btn w-100 my-3" type="submit" value="Log in">
             </form>

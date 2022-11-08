@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { JsonService } from './services/json.service';
+import { SymfonyService } from './services/symfony.service';
 
 
 @Component({
@@ -11,10 +12,12 @@ import { JsonService } from './services/json.service';
 export class AppComponent {
   title = 'Version-0';
 
-  constructor(public dataService: JsonService){}
+  constructor(public dataService: JsonService,private symfonyService: SymfonyService){}
 
   ngOnInit():void{
     this.dataService.datosJson();
+    this.symfonyService.getIntegrantes();
+    this.symfonyService.getContact();
   }
 
 }

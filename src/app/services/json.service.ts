@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { TitleStrategy } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +21,7 @@ export class JsonService {
             showDescription: false
           }
         })
+        console.log(this.json)
       })
   }
 }

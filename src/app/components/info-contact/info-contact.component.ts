@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SymfonyService } from 'src/app/services/symfony.service';
 
 @Component({
   selector: 'app-info-contact',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(public symfonyServer: SymfonyService) { }
 
   ngOnInit(): void {
   }

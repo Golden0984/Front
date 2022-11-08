@@ -41,12 +41,14 @@
                         </div>
                     </div>
                 </form>
-                <div class="text-white">
+                <div class="text-white" *ngFor="let datos of symfonyServer.Contact">
                     <h2 class="text-uppercase mt-4 font-weight-bold">Other methods</h2>
-
-                    <i class="fa fa-phone mt-3"></i> <a href="tel:+"> (+39) 123456</a><br>
-                    <i class="fa fa-envelope mt-3"></i> <a href=""> info@test.it</a><br>
-                    <i class="fa fa-globe mt-3"></i> Calle terenamera, 1, 00184 Spain<br>
+                    <i class="fa fa-phone mt-3"></i>
+                    <a href="" class="px-2">{{ datos.telefono}}</a><br>
+                    <i class="fa fa-envelope mt-3"></i>
+                    <a href="" class="px-2">{{ datos.email}}</a><br>
+                    <i class="fa fa-globe mt-3"></i> 
+                    <a href="" class="px-2">{{ datos.direccion}}</a><br>
                 </div>
             </div>
         </div>

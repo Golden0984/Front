@@ -5,15 +5,22 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class SymfonyService {
-  public Usuarios: any = [];
+  public AboutUs: any = [];
+  public Contact: any = [];
 
   constructor(private httpClient: HttpClient) { }
 
-  getUsuarios() {
-    this.httpClient.get("http://localhost:8000/user")
+  getIntegrantes() {
+    this.httpClient.get("http://localhost:8000/aboutUs")
       .subscribe((data: any) => {
-        this.Usuarios = data;
-        console.log(data);
+        this.AboutUs = data;
+      })
+  }
+
+  getContact() {
+    this.httpClient.get("http://localhost:8000/contact")
+      .subscribe((data: any) => {
+        this.Contact = data;
       })
   }
 }
