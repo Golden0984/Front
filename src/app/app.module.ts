@@ -16,6 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { ServicesComponent } from './views/services/services.component';
+// importacion para modulo reactivo login importacion formsmodule para ng model del formulario de registro
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ServicesComponent } from './views/services/services.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SwiperModule
+    SwiperModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

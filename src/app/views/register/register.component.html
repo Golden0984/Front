@@ -3,18 +3,21 @@
         <header class="img-omgg">
             <img src="./assets/img/icono-logo-blanco.png" alt="logo">
         </header>
-        <div class="detalles margin contenedorPagina">
+        <div class="detalles contenedorPagina">
             <div class="box-title">
                 <h3>Registrate en One More G.G</h3>
             </div>
             <div class="detalles box-options-register">
                 <button class="btn-sencill">
-                    <svg class="lg-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="DodgerBlue"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                    <svg class="lg-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="DodgerBlue">
+                        <path
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                    </svg>
                     <p> Registrate con Facebook</p>
                 </button>
                 <button class="btn-sencill">
-                    <img src="./assets/img/google.png" alt="">   
-                    <p>Registrate con Gmail</p>    
+                    <img src="./assets/img/google.png" alt="">
+                    <p>Registrate con Gmail</p>
                 </button>
             </div>
             <div class="hr-detalles">
@@ -22,40 +25,65 @@
                 <span>o</span>
                 <hr>
             </div>
-                <form class="formulario">
-                    <div class="cajaDatos usuario">
-                        <p class="icono-user" for="usuario">
-                            <i class="fa-solid fa-user"></i>
-                        </p>
-                        <input class="datos" type="text" name="usuario" placeholder="Username">
-                    </div>
-                    <div class="cajaDatos contraseña1">
-                        <p class="icono-user">
-                            <i class="fa-solid fa-lock"></i>
-                        </p>
-                        <input class="datos contrasena " type="password" name="contrasena" placeholder="Password">
-                    </div>
-                    <div class="cajaDatos contrasena2">
-                        <p class="icono-user">
-                            <i class="fa-solid fa-key"></i>
-                        </p>
-                        <input class="datos" type="password" name="contrasena2" placeholder="Confirm Password">
-                    </div>
-                    <div class="cajaDatos correo">
-                        <p class="icono-user">
-                            <i class="fa-solid fa-envelope"></i>
-                        </p>
-                        <input class="datos" type="email" name="email" placeholder="Gmail">
-                    </div>
-                    <div class="formulario-btn">
-                        <button class="btn-danger btn w-100" type="submit" name="registrar">Register</button>
-                    </div>
-                    <hr>                    
-                    <div>
-                        <a routerLink="/login">Log in</a>
-                        <span>.</span>
-                        <a>¿Did you forgotten your password?</a>
-                    </div>
+            <form #form="ngForm" class="formulario" (ngSubmit)="submitRegister(form)">
+                <div class="cajaDatos usuario">
+                    <p class="icono-user" for="usuario">
+                        <i class="fa-solid fa-user"></i>
+                    </p>
+                    <input class="datos" type="text" [(ngModel)]="username" required minlength="2" name="username"
+                        placeholder="Username" #usernameValidator="ngModel">
+                    <span class="errorMessage"
+                        *ngIf="usernameValidator.hasError('required') && (usernameValidator.dirty || usernameValidator.touched)">Este
+                        campo es requerido</span>
+                    <span class="errorMessage"
+                        *ngIf="usernameValidator.hasError('minlength') && (usernameValidator.dirty || usernameValidator.touched)">Este
+                        campo tiene que tener como mínimo 2 carácteres</span>
+                </div>
+                <div class="cajaDatos contraseña1">
+                    <p class="icono-user">
+                        <i class="fa-solid fa-lock"></i>
+                    </p>
+                    <input class="datos contrasena " type="password" required [(ngModel)]="contrasena" name="contrasena"
+                        placeholder="Password" #contraValidator="ngModel">
+                    <span class="errorMessage"
+                        *ngIf="contraValidator.hasError('required') && (contraValidator.dirty || contraValidator.touched)">Es
+                        necesaria una contraseña
+                    </span>
+                </div>
+                <div class="cajaDatos contrasena2">
+                    <p class="icono-user">
+                        <i class="fa-solid fa-key"></i>
+                    </p>
+                    <input class="datos" type="password" name="contrasena2" placeholder="Confirm Password" required
+                        [(ngModel)]="contrasena2" #contra2Validato="ngModel">
+                    <span class="errorMessage"
+                        *ngIf="contrasena != contrasena2 ">Las contraseñas no son iguales
+                    </span>
+                </div>
+                <div class="cajaDatos correo">
+                    <p class="icono-user">
+                        <i class="fa-solid fa-envelope"></i>
+                    </p>
+                    <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="datos" type="email" name="email"
+                        placeholder="Gmail" [(ngModel)]="email" required #emailValidator="ngModel">
+                    <span class="errorMessage"
+                        *ngIf="emailValidator.hasError('required') && (emailValidator.dirty || emailValidator.touched)">El
+                        campo email es requerido
+                    </span>
+                    <span class="errorMessage"
+                        *ngIf="emailValidator.hasError('pattern') && (emailValidator.dirty || emailValidator.touched)">El
+                        El email es inválido
+                    </span>
+                </div>
+                <div class="formulario-btn">
+                    <button class="btn-danger btn w-100" type="submit" name="registrar">Register</button>
+                </div>
+                <hr>
+                <div>
+                    <a routerLink="/login">Log in</a>
+                    <span>.</span>
+                    <a>¿Did you forgotten your password?</a>
+                </div>
             </form>
         </div>
     </div>

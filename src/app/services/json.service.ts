@@ -22,8 +22,6 @@ export class JsonService {
             showDescription: false
           }
         })
-        console.log(this.json);
-
       })
   }
 }
