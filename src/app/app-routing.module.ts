@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsModule } from './views/about-us/about-us.module';
 import { ContactModule } from './views/contact/contact.module';
-import { HomeModule } from './views/home/home.module';
 import { LoginModule } from './views/login/login.module';
 import { RegisterModule } from './views/register/register.module';
 import { ServicesModule } from './views/services/services.module';
+import { HomeModule } from './views/home/home.module';
 
 const routes: Routes = [
   {
