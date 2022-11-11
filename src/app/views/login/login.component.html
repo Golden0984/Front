@@ -28,7 +28,7 @@
                         <i class="fa-solid fa-user"></i>
                     </p>
                     <input class="flex-grow-1 datos-user" type="text" id="nombreUsuario" formControlName="usuario" placeholder="Username">
-                    <span class="errorMessage" *ngIf="formLogin.get('contrasena')?.hasError('required') && (formLogin.get('contrasena')?.dirty || formLogin.get('contrasena')?.touched)" >Este campo es requerido</span>
+                    <span class="errorMessage" *ngIf="formLogin.get('usuario')?.hasError('required') && (formLogin.get('usuario')?.dirty || formLogin.get('usuario')?.touched)" >Este campo es requerido</span>
                 </div>
                 <div class="cajaDatos  caja-datos-contra">
                     <p class="icono-user" for="usuario">

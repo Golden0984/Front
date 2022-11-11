@@ -14,6 +14,7 @@ export class SymfonyService {
     this.httpClient.get("http://localhost:8000/aboutUs")
       .subscribe((data: any) => {
         this.AboutUs = data;
+        console.log(data)
       })
   }
 
